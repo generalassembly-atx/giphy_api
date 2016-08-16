@@ -12,5 +12,13 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "WDI 6",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/llemonggang/giphy_api.git"
+  },
+  "bugs": {
+    "url": "https://github.com/llemonggang/giphy_api/issues"
+  },
+  "homepage": "https://github.com/llemonggang/giphy_api#readme"
 }
