@@ -4,22 +4,22 @@ var open = require('open');
 // 1. Find the correct URL to get adorable hamsters from Giphy!
 request('GIPHY API GET REQUEST URL', function (error, response, body) {
   if (!error && response.statusCode == 200) {
-    var response_hash = JSON.parse(body);
-    console.log(response_hash);
+    var responseObject = JSON.parse(body);
+    console.log(responseObject);
 
-    // 2. Set up an array variable `data_array` that stores the array of GIF hashes. HINT: You'll want to grab the value of the "data" key in the `response_hash` object.
-    // var data_array = ???;
+    // 2. Set up an array variable `dataArray` that stores the array of GIF objects. HINT: You'll want to grab the value of the "data" key in the `responseObject` object.
+    // var dataArray = ???;
 
-    // 3. Use the `map()` function to iterate through the `data_array` array. For each `gif_hash` in `data_array`, return the GIF URL.
-    // var url_array = data_array.map(function(gif_hash){
+    // 3. Use the `map()` function to iterate through the `dataArray` array. For each `gifObject` in `dataArray`, return the GIF URL.
+    // var urlArray = dataArray.map(function(gifObject){
     //   ???
     // })
 
-    // 4. Log the `url_array` to your console.
-    // console.log(url_array);
+    // 4. Log the `urlArray` to your console.
+    // console.log(urlArray);
 
     // 5. Uncomment this once it works to open a random GIF in your browser!
-    // openRandom(url_array);
+    // openRandom(urlArray);
   }
 })
 
