@@ -16,21 +16,19 @@ request('http://api.giphy.com/v1/gifs/search?q=hamster&api_key=dc6zaTOxFJmzC   '
 
     // 3. Use the `map()` function to iterate through the `data_array` array. For each `gif_hash` in `data_array`, return the GIF URL.
     var url_array = data_array.map(function(gif_hash){
-      for (var i = 0; i < data_array.length; i++){
-        return gif_hash.url
-        console.log(gif_hash);
-      }
+      return 'http://api.giphy.com/v1/gifs/ +gif_hash+'
+        // console.log(gif_hash);
     });
 
     // 4. Log the `url_array` to your console.
     // console.log(url_array);
 
     // 5. Uncomment this once it works to open a random GIF in your browser!
-    // openRandom(url_array);
+    openRandom(url_array);
   }
 })
 
 function openRandom(array){
-  var item = array[Math.floor(Math.random()*array.length)];
+  var item = array[Math.floor(Math.random()data_array.length)];
   open(item);
 }
