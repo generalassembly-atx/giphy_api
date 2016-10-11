@@ -2,7 +2,7 @@ var request = require('request');
 var open = require('open');
 
 // 1. Find the correct URL to get adorable hamsters from Giphy!
-request('GIPHY API GET REQUEST URL', function (error, response, body) {
+request('http://api.giphy.com/v1/gifs/search?q=funny+cat&api_key=dc6zaTOxFJmzC', function (error, response, body) {
   if (!error && response.statusCode == 200) {
     var responseObject = JSON.parse(body);
     console.log(responseObject);
