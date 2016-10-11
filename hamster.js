@@ -5,16 +5,15 @@ var open = require('open');
 request('http://api.giphy.com/v1/gifs/search?q=hamsters&api_key=dc6zaTOxFJmzC', function (error, response, body) {
   if (!error && response.statusCode == 200) {
     var responseObject = JSON.parse(body);
-    console.log(responseObject);
 
     // 2. Set up an array variable `dataArray` that stores the array of GIF objects. HINT: You'll want to grab the value of the "data" key in the `responseObject` object.
-     var dataArray = 
+     var dataArray = responseObject.data;
 
     // 3. Use the `map()` function to iterate through the `dataArray` array. For each `gifObject` in `dataArray`, return the GIF URL.
-    // var urlArray = dataArray.map(function(gifObject){
-    //   ???
-    // })
-
+    var urlArray = dataArray.map(function(gifObject){
+       return gifObject.url;
+    })
+    console.log(urlArray);
     // 4. Log the `urlArray` to your console.
     // console.log(urlArray);
 
