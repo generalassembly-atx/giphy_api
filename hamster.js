@@ -22,7 +22,7 @@ request('http://api.giphy.com/v1/gifs/search?q=funny+cat&api_key=dc6zaTOxFJmzC',
     console.log(urlArray);
 
     // 5. Uncomment this once it works to open a random GIF in your browser!
-    // openRandom(urlArray);
+    openRandom(urlArray);
   }
 })
 
