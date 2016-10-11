@@ -13,11 +13,13 @@ request('http://api.giphy.com/v1/gifs/search?q=funny+cat&api_key=dc6zaTOxFJmzC',
 
     // 3. Use the `map()` function to iterate through the `dataArray` array. For each `gifObject` in `dataArray`, return the GIF URL.
     var urlArray = dataArray.map(function(gifObject){
-
+      for (var i = 0; i < dataArray.length; i++) {
+        return gifObject.url;
+      }
     })
 
     // 4. Log the `urlArray` to your console.
-    // console.log(urlArray);
+    console.log(urlArray);
 
     // 5. Uncomment this once it works to open a random GIF in your browser!
     // openRandom(urlArray);
